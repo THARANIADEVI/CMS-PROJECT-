@@ -1,0 +1,21 @@
+# Python / Django backend
+backend/venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/*.pyc
+backend/db.sqlite3
+backend/.env
+backend/media/
+backend/staticfiles/
+
+# Node (cms-admin, frontend)
+node_modules/
+dist/
+.next/
+*.env
+*.env.local
+!*.env.example
+
+# Misc
+.DS_Store
+*.log
