@@ -56,7 +56,7 @@ api.interceptors.response.use(
         original.headers.Authorization = `Bearer ${newAccess}`;
         return api(original);
       }
-      window.location.href = "/login";
+      window.location.href = "/admin/login";
     }
     return Promise.reject(error);
   }

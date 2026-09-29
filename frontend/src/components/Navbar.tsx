@@ -20,7 +20,10 @@ export default function Navbar() {
         <ul className="hidden sm:flex gap-6 text-sm text-slate-600">
           {LINKS.map((l) => (
             <li key={l.href}>
-              <Link href={l.href} className="hover:text-indigo-600 transition">
+              <Link
+                href={l.href}
+                className="relative py-1 transition-colors hover:text-indigo-600 after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-indigo-600 after:transition-all after:duration-300 hover:after:w-full"
+              >
                 {l.label}
               </Link>
             </li>
