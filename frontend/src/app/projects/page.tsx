@@ -17,20 +17,20 @@ export default async function ProjectsPage() {
           <Reveal key={p.id} delay={i * 0.08}>
             <AnimatedCard
               href={`/projects/${p.slug}`}
-              className="border border-slate-200 rounded-xl p-5 hover:shadow-md transition-shadow block h-full"
+              className="border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:shadow-md dark:hover:shadow-slate-800 transition-shadow block h-full"
             >
               {p.image && (
                 <img src={p.image} alt={p.title} className="rounded-lg mb-3 aspect-video object-cover w-full" />
               )}
               <h2 className="font-semibold text-lg">{p.title}</h2>
-              <p className="text-sm text-slate-500 mt-1">{p.short_description}</p>
+              <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">{p.short_description}</p>
               {p.tech_stack && (
-                <p className="text-xs text-indigo-600 mt-2">{p.tech_stack}</p>
+                <p className="text-xs text-indigo-600 dark:text-indigo-400 mt-2">{p.tech_stack}</p>
               )}
             </AnimatedCard>
           </Reveal>
         ))}
-        {projects.length === 0 && <p className="text-slate-400">No projects published yet.</p>}
+        {projects.length === 0 && <p className="text-slate-400 dark:text-slate-500">No projects published yet.</p>}
       </div>
     </div>
   );

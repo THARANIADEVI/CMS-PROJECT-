@@ -16,10 +16,10 @@ export default async function BlogDetailPage({
         <img src={blog.cover_image} alt={blog.title} className="rounded-xl mb-6 w-full aspect-video object-cover" />
       )}
       <h1 className="text-3xl font-bold">{blog.title}</h1>
-      <p className="text-slate-400 text-sm mt-2">
+      <p className="text-slate-400 dark:text-slate-500 text-sm mt-2">
         {new Date(blog.published_at || blog.created_at).toLocaleDateString()}
       </p>
-      <div className="text-slate-700 mt-6 whitespace-pre-line leading-relaxed">{blog.content}</div>
+      <div className="text-slate-700 dark:text-slate-300 mt-6 whitespace-pre-line leading-relaxed">{blog.content}</div>
     </div>
   );
 }

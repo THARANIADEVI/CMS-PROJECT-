@@ -28,7 +28,7 @@ export default async function SkillsPage() {
             </div>
           </Reveal>
         ))}
-        {skills.length === 0 && <p className="text-slate-400">No skills published yet.</p>}
+        {skills.length === 0 && <p className="text-slate-400 dark:text-slate-500">No skills published yet.</p>}
       </div>
     </div>
   );

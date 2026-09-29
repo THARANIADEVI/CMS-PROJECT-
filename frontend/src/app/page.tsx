@@ -27,7 +27,7 @@ export default async function Home() {
             {about?.name || "Your Name"}
           </h1>
           <p className="text-xl text-indigo-600 mt-2">{about?.title || "Full-Stack Developer"}</p>
-          <p className="text-slate-600 max-w-xl mx-auto mt-4">{about?.bio}</p>
+          <p className="text-slate-600 dark:text-slate-300 max-w-xl mx-auto mt-4">{about?.bio}</p>
           <div className="mt-8 flex justify-center gap-4">
             <Link
               href="/projects"
@@ -37,7 +37,7 @@ export default async function Home() {
             </Link>
             <Link
               href="/contact"
-              className="border border-slate-300 px-5 py-2.5 rounded-lg font-medium transition-transform hover:bg-slate-50 hover:-translate-y-0.5"
+              className="border border-slate-300 dark:border-slate-600 px-5 py-2.5 rounded-lg font-medium transition-transform hover:bg-slate-50 dark:hover:bg-slate-800 hover:-translate-y-0.5"
             >
               Contact Me
             </Link>
@@ -55,13 +55,13 @@ export default async function Home() {
               <Reveal key={p.id} delay={i * 0.1}>
                 <AnimatedCard
                   href={`/projects/${p.slug}`}
-                  className="border border-slate-200 rounded-xl p-5 hover:shadow-md transition-shadow block h-full"
+                  className="border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:shadow-md dark:hover:shadow-slate-800 transition-shadow block h-full"
                 >
                   {p.image && (
                     <img src={p.image} alt={p.title} className="rounded-lg mb-3 aspect-video object-cover" />
                   )}
                   <h3 className="font-semibold">{p.title}</h3>
-                  <p className="text-sm text-slate-500 mt-1">{p.short_description}</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">{p.short_description}</p>
                 </AnimatedCard>
               </Reveal>
             ))}
@@ -77,7 +77,7 @@ export default async function Home() {
               {skills.map((s) => (
                 <span
                   key={s.id}
-                  className="px-3 py-1.5 rounded-full bg-slate-100 text-sm text-slate-700 transition-colors hover:bg-indigo-100 hover:text-indigo-700"
+                  className="px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-sm text-slate-700 dark:text-slate-300 transition-colors hover:bg-indigo-100 dark:hover:bg-indigo-900/40 hover:text-indigo-700 dark:hover:text-indigo-300"
                 >
                   {s.name}
                 </span>

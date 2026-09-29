@@ -30,7 +30,7 @@ export default function ContactForm() {
         <label className="block text-sm font-medium mb-1">Name</label>
         <input
           required
-          className="w-full border border-slate-300 rounded px-3 py-2"
+          className="w-full border border-slate-300 dark:border-slate-600 dark:bg-slate-800 rounded px-3 py-2"
           value={form.name}
           onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
         />
@@ -40,7 +40,7 @@ export default function ContactForm() {
         <input
           type="email"
           required
-          className="w-full border border-slate-300 rounded px-3 py-2"
+          className="w-full border border-slate-300 dark:border-slate-600 dark:bg-slate-800 rounded px-3 py-2"
           value={form.email}
           onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
         />
@@ -48,7 +48,7 @@ export default function ContactForm() {
       <div>
         <label className="block text-sm font-medium mb-1">Subject</label>
         <input
-          className="w-full border border-slate-300 rounded px-3 py-2"
+          className="w-full border border-slate-300 dark:border-slate-600 dark:bg-slate-800 rounded px-3 py-2"
           value={form.subject}
           onChange={(e) => setForm((f) => ({ ...f, subject: e.target.value }))}
         />
@@ -58,7 +58,7 @@ export default function ContactForm() {
         <textarea
           required
           rows={5}
-          className="w-full border border-slate-300 rounded px-3 py-2"
+          className="w-full border border-slate-300 dark:border-slate-600 dark:bg-slate-800 rounded px-3 py-2"
           value={form.message}
           onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
         />
